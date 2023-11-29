@@ -38,7 +38,7 @@ module.exports = {
       }
     }
   },
-  ignorePatterns: ["node_modules/", "vite.config.ts", ".eslintrc.cjs"],
+  ignorePatterns: ["node_modules/", "vite.config.ts", ".eslintrc.cjs", "tailwind.config.js"],
   rules: {
       "react/jsx-filename-extension": [
         "error",
