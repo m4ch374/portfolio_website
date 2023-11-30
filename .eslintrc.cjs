@@ -13,7 +13,8 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:react/jsx-runtime",
-    "prettier"
+    "prettier",
+    "plugin:tailwindcss/recommended"
   ],
   parserOptions: {
     ecmaVersion: "latest",
@@ -47,11 +48,11 @@ module.exports = {
       "@typescript-eslint/no-floating-promises": ["error", { ignoreIIFE: true }],
       "@typescript-eslint/no-unused-expressions": ["error", { allowTernary: true }],
       "prettier/prettier": ["error", {
-      usePrettierrc: false,
-      endOfFile: "auto",
-      semi: false,
-      arrowParens: "avoid",
-      trailingComma: "all"
+        usePrettierrc: false,
+        endOfFile: "auto",
+        semi: false,
+        arrowParens: "avoid",
+        trailingComma: "all"
     }]
   }
 }
