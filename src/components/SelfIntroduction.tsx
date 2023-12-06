@@ -2,7 +2,11 @@ import React from "react"
 
 const SelfIntroduction: React.FC = () => {
   return (
-    <div className="h-[1000px] bg-gradient-to-b from-[#b3734b] to-[#e5bca2] to-50%"></div>
+    <div className="flex h-[1000px] justify-center bg-gradient-to-b from-[#b3734b] to-[#e5bca2] to-50%">
+      <div className="w-[90%] max-w-[800px] pt-20">
+        This is Henry Wan hahahahahaahah
+      </div>
+    </div>
   )
 }
 
