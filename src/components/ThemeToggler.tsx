@@ -14,7 +14,7 @@ const ThemeToggler: React.FC = () => {
     >
       <motion.div
         layout
-        className={`relative aspect-square h-full rounded-full bg-amber-400 transition-colors dark:bg-white`}
+        className={`relative aspect-square h-full rounded-full bg-amber-400 transition-colors duration-1000 dark:bg-white`}
       >
         <div
           className={`relative bottom-1 right-2 h-full w-full overflow-hidden rounded-full bg-transparent transition-colors dark:bg-slate-700`}
