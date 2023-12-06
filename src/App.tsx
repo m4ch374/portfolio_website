@@ -1,8 +1,26 @@
-import React from "react"
+import NavBar from "components/NavBar"
+import ParallaxBanner from "components/ParallaxBanner"
+import SelfIntroduction from "components/SelfIntroduction"
+import React, { useState } from "react"
+import DarkTheme from "utils/DarkTheme"
 
 // comment
 const App: React.FC = () => {
-  return <div className="p-4 pt-2 text-4xl text-red-500">hi</div>
+  const themeController = useState(false)
+
+  return (
+    <DarkTheme.Provider value={themeController}>
+      <div className={`${!themeController[0] && "dark"}`}>
+        <NavBar />
+
+        <ParallaxBanner />
+
+        <div className="absolute z-50 mt-[-70px] h-[70px] w-full bg-gradient-to-b from-transparent to-[#b3734b] dark:to-[#1c0522]" />
+
+        <SelfIntroduction />
+      </div>
+    </DarkTheme.Provider>
+  )
 }
 
 export default App
