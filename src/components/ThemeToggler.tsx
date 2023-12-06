@@ -29,7 +29,12 @@ const ThemeToggler: React.FC = () => {
             animate={{
               opacity: 1,
               x: 0,
-              transition: { type: "tween", ease: "easeIn", duration: 0.4 },
+              transition: {
+                type: "tween",
+                ease: "easeIn",
+                duration: 0.3,
+                delay: 0.2,
+              },
             }}
             exit={{ opacity: 0, y: 45 }}
             className="absolute left-0 top-0"
@@ -45,7 +50,12 @@ const ThemeToggler: React.FC = () => {
             animate={{
               opacity: 1,
               y: 0,
-              transition: { type: "tween", ease: "easeIn", duration: 0.3 },
+              transition: {
+                type: "tween",
+                ease: "backIn",
+                duration: 0.3,
+                delay: 0.2,
+              },
             }}
             exit={{ opacity: 0, y: 45 }}
             className="absolute left-0 top-0 text-amber-300"
