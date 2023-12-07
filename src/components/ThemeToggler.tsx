@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import useDarkTheme from "hooks/DarkTheme.hooks"
 import Cloud from "assets/icons/Cloud"
@@ -6,11 +6,18 @@ import Sparkle from "assets/icons/Sparkle"
 
 const ThemeToggler: React.FC = () => {
   const { isLight, setIsLight } = useDarkTheme()
+  const [disbled, setDisabled] = useState(false)
 
   return (
     <div
       className={`flex h-[40px] w-[85px] cursor-pointer overflow-hidden rounded-full border-2 border-white/50 bg-sky-300 p-1 drop-shadow-md transition-colors dark:justify-end dark:bg-slate-700`}
-      onClick={() => setIsLight(s => !s)}
+      onClick={() => {
+        if (disbled) return
+
+        setIsLight(s => !s)
+        setDisabled(true)
+        setTimeout(() => setDisabled(false), 1300)
+      }}
     >
       <motion.div
         layout
