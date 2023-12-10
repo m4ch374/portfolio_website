@@ -9,7 +9,12 @@ export default {
     fontFamily: {
       "logo": ["Callahan", "sans-serif"]
     },
-    extend: {},
+    extend: {
+      dropShadow: {
+        "day-sun": "0 0px 4em #facc15",
+        "night-sun": "0 0 7em #a5f3fc"
+      }
+    },
   },
   plugins: [],
 }

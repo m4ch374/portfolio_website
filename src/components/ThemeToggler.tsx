@@ -43,7 +43,7 @@ const ThemeToggler: React.FC = () => {
                 delay: 0.2,
               },
             }}
-            exit={{ opacity: 0, y: 45 }}
+            exit={{ opacity: 0, y: 45, transition: { duration: 0.7 } }}
             className="absolute left-0 top-0"
           >
             <Cloud className="absolute left-5 top-4 h-5 w-5 text-white" />
@@ -64,7 +64,7 @@ const ThemeToggler: React.FC = () => {
                 delay: 0.2,
               },
             }}
-            exit={{ opacity: 0, y: 45 }}
+            exit={{ opacity: 0, y: 45, transition: { duration: 0.7 } }}
             className="absolute left-0 top-0 text-amber-300"
           >
             <Sparkle className="absolute left-2 top-1 h-3 w-3" />
