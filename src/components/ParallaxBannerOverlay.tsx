@@ -26,11 +26,17 @@ const ParallaxBannerOverlay: React.FC = () => {
 
   return (
     <div className="absolute left-0 top-0 z-[60] mt-20 flex h-full w-full flex-col items-center">
-      <img
-        draggable={false}
-        src="/myself.jpg"
-        className="m-14 h-44 w-44 rounded-full border-2 border-orange-500/20 opacity-95 drop-shadow-day-sun transition-all delay-300 duration-1000 dark:border-white/20 dark:drop-shadow-night-sun"
-      />
+      <motion.div
+        drag
+        dragSnapToOrigin
+        dragConstraints={{ bottom: 40, left: 40, top: 40, right: 40 }}
+      >
+        <img
+          draggable={false}
+          src="/myself.jpg"
+          className="m-14 h-44 w-44 rounded-full border-2 border-orange-500/20 opacity-95 drop-shadow-day-sun transition-all delay-300 duration-1000 dark:border-white/20 dark:drop-shadow-night-sun"
+        />
+      </motion.div>
       <AnimatePresence mode="wait">
         <div className="flex justify-center text-4xl font-thin drop-shadow-md">
           <motion.div
