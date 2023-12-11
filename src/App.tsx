@@ -1,3 +1,4 @@
+import FadeDevider from "components/FadeDevider"
 import NavBar from "components/NavBar"
 import ParallaxBanner from "components/ParallaxBanner"
 import SelfIntroduction from "components/SelfIntroduction"
@@ -15,7 +16,7 @@ const App: React.FC = () => {
 
         <ParallaxBanner />
 
-        <div className="absolute z-50 mt-[-70px] h-[70px] w-full bg-gradient-to-b from-transparent to-[#b3734b] dark:to-[#1c0522]" />
+        <FadeDevider />
 
         <SelfIntroduction />
       </div>
