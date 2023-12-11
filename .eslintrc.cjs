@@ -14,7 +14,8 @@ module.exports = {
     "plugin:import/typescript",
     "plugin:react/jsx-runtime",
     "prettier",
-    "plugin:tailwindcss/recommended"
+    "plugin:tailwindcss/recommended",
+    "plugin:@react-three/recommended"
   ],
   parserOptions: {
     ecmaVersion: "latest",
@@ -27,7 +28,8 @@ module.exports = {
     "@typescript-eslint",
     "react",
     "react-hooks",
-    "prettier"
+    "prettier",
+    "@react-three"
   ],
   settings: {
     react: {
