@@ -28,7 +28,7 @@ const ThemeToggler: React.FC = () => {
         />
       </motion.div>
 
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {isLight ? (
           <motion.div
             key="day"
