@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import useDarkTheme from "hooks/DarkTheme.hooks"
 import Cloud from "assets/icons/Cloud"
@@ -6,11 +6,18 @@ import Sparkle from "assets/icons/Sparkle"
 
 const ThemeToggler: React.FC = () => {
   const { isLight, setIsLight } = useDarkTheme()
+  const [disbled, setDisabled] = useState(false)
 
   return (
     <div
       className={`flex h-[40px] w-[85px] cursor-pointer overflow-hidden rounded-full border-2 border-white/50 bg-sky-300 p-1 drop-shadow-md transition-colors dark:justify-end dark:bg-slate-700`}
-      onClick={() => setIsLight(s => !s)}
+      onClick={() => {
+        if (disbled) return
+
+        setIsLight(s => !s)
+        setDisabled(true)
+        setTimeout(() => setDisabled(false), 1300)
+      }}
     >
       <motion.div
         layout
@@ -21,7 +28,7 @@ const ThemeToggler: React.FC = () => {
         />
       </motion.div>
 
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {isLight ? (
           <motion.div
             key="day"
@@ -36,7 +43,7 @@ const ThemeToggler: React.FC = () => {
                 delay: 0.2,
               },
             }}
-            exit={{ opacity: 0, y: 45 }}
+            exit={{ opacity: 0, y: 45, transition: { duration: 0.7 } }}
             className="absolute left-0 top-0"
           >
             <Cloud className="absolute left-5 top-4 h-5 w-5 text-white" />
@@ -57,7 +64,7 @@ const ThemeToggler: React.FC = () => {
                 delay: 0.2,
               },
             }}
-            exit={{ opacity: 0, y: 45 }}
+            exit={{ opacity: 0, y: 45, transition: { duration: 0.7 } }}
             className="absolute left-0 top-0 text-amber-300"
           >
             <Sparkle className="absolute left-2 top-1 h-3 w-3" />
