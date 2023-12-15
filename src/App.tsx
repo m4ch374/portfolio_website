@@ -1,3 +1,4 @@
+import IntroBanner from "components/intro/IntroBanner"
 import React, { useState } from "react"
 import DarkTheme from "utils/DarkTheme"
 
@@ -6,7 +7,7 @@ const App: React.FC = () => {
 
   return (
     <DarkTheme.Provider value={themeController}>
-      <div></div>
+      <IntroBanner />
     </DarkTheme.Provider>
   )
 }
