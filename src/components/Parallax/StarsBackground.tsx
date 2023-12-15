@@ -6,7 +6,7 @@ import { useInView } from "framer-motion"
 import { random } from "maath"
 import React, { Suspense, useRef, useState } from "react"
 
-const AllStars = () => {
+const AllStars: React.FC<{ visible: boolean }> = ({ visible }) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const ref: any = useRef()
   const [stars] = useState(() =>
@@ -21,7 +21,7 @@ const AllStars = () => {
   })
 
   return (
-    <group rotation={[0, 0, Math.PI / 4]}>
+    <group visible={visible} rotation={[0, 0, Math.PI / 4]}>
       <Points
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         ref={ref}
@@ -52,7 +52,7 @@ const StarsBackground: React.FC = () => {
         frameloop={inView ? "always" : "demand"}
       >
         <Suspense fallback={false}>
-          <AllStars />
+          <AllStars visible={inView} />
         </Suspense>
       </Canvas>
     </div>
