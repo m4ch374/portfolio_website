@@ -11,11 +11,11 @@ export default {
     },
     extend: {
       dropShadow: {
-        "day-sun": "0 0px 4em #facc15",
+        "day-sun": "0 0px 2em #fde68a",
         "night-sun": "0 0 7em #a5f3fc"
       },
       boxShadow: {
-        "day-sun": "0 0px 4em #facc15",
+        "day-sun": "0 0px 0.5em #facc15",
         "night-sun": "0 0 7em #a5f3fc"
       }
     },

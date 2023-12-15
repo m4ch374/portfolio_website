@@ -1,10 +1,13 @@
 import { motion, useScroll, useSpring, useTransform } from "framer-motion"
 import useDimensions from "hooks/Dimensions.hooks"
 import React from "react"
+import { twMerge } from "tailwind-merge"
+import StarsBackground from "./StarsBackground"
 
 const ParallaxWrapper: React.FC<{
-  children: string | JSX.Element | JSX.Element[]
-}> = ({ children }) => {
+  children?: string | JSX.Element | JSX.Element[]
+  className?: string
+}> = ({ children, className }) => {
   const { scrollY } = useScroll()
   const { height } = useDimensions()
 
@@ -15,14 +18,18 @@ const ParallaxWrapper: React.FC<{
   })
 
   const parallaxY = useTransform(() => {
-    return height - springY.get() * 0.2
+    return height - springY.get() * 0.2 + 1
   })
 
   return (
     <motion.div
       style={{ marginTop: scrollY.get() >= height ? height : parallaxY }}
-      className="absolute left-0 top-0 z-10 h-[1000px] w-full bg-gray-800"
+      className={twMerge(
+        "absolute z-10 h-[1000px] w-full bg-[#1c1c1c] drop-shadow-day-sun border-t border-t-zinc-500",
+        className,
+      )}
     >
+      <StarsBackground />
       {children}
     </motion.div>
   )
