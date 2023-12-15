@@ -118,10 +118,9 @@ const IntroTextSection: React.FC = () => {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, ...(isMd ? { x: 400 } : { y: 200 }) }}
+        initial={{ opacity: 0, x: 400 }}
         animate={{
           opacity: 1,
-          y: 0,
           x: 0,
           transition: { delay: 0.6, ease: "easeOut", duration: 0.7 },
         }}
