@@ -48,14 +48,17 @@ const IntroTextSection: React.FC = () => {
           </h1>
         </AnimatePresence>
 
-        <h3 className="max-w-[500px] text-center text-zinc-400 md:text-start">
+        <motion.h3
+          layout
+          className="max-w-[500px] text-center text-zinc-400 md:text-start"
+        >
           I am an aspiring front-end programmer, experienced in website, mobile
           and Software Engineering. I am also a fresh graduate from the
           University of New South Wales!
-        </h3>
+        </motion.h3>
       </div>
 
-      <div className="flex aspect-square w-[400px] max-w-[400px] items-center justify-center rounded-md bg-white/10">
+      <div className="flex aspect-square w-[400px] max-w-[400px] items-center justify-center rounded-md bg-zinc-800">
         Place reserved for 3d model
       </div>
     </div>
