@@ -28,7 +28,7 @@ const IntroTextSection: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-3 px-8 md:flex-row">
       <div>
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence mode="wait">
           <h1 className="mb-4 flex justify-center text-3xl font-thin tracking-tight md:mb-12 md:flex-wrap md:justify-start md:text-[2.5rem]">
             <motion.div
               key={allHi[currHi]}
