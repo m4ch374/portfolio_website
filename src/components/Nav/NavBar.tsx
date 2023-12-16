@@ -38,7 +38,7 @@ const NavBar: React.FC = () => {
           </NavBarHighlightLink>
         </div>
 
-        <div className="flex p-2 text-violet-300">
+        <div className="flex p-2 text-violet-200">
           <NavBarHighlightLink
             href="https://www.linkedin.com/in/henry-wan-dev/"
             target="_blank"

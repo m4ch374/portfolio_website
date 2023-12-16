@@ -11,7 +11,7 @@ const App: React.FC = () => {
     <DarkTheme.Provider value={themeController}>
       <NavBar />
       <IntroBanner />
-      <ParallaxWrapper></ParallaxWrapper>
+      <ParallaxWrapper>hihihi</ParallaxWrapper>
     </DarkTheme.Provider>
   )
 }

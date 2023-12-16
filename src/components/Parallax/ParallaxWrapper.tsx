@@ -25,7 +25,7 @@ const ParallaxWrapper: React.FC<{
     <motion.div
       style={{ marginTop: scrollY.get() >= height ? height : parallaxY }}
       className={twMerge(
-        "absolute z-10 h-[1000px] w-full bg-[#1c1c1c] drop-shadow-day-sun border-t border-t-zinc-500",
+        "absolute z-10 h-[1000px] w-full bg-[#1c1c1c] drop-shadow-2xl border-t border-t-zinc-500",
         className,
       )}
     >
