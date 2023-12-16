@@ -6,10 +6,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      "logo": ["Callahan", "sans-serif"]
-    },
     extend: {
+      fontFamily: {
+        "logo": ["Garet", "sans-serif"]
+      },
       dropShadow: {
         "day-sun": "0 0px 2em #fde68a",
         "night-sun": "0 0 7em #a5f3fc"
