@@ -9,7 +9,7 @@ const ParallaxWrapper: React.FC<{
   className?: string
 }> = ({ children, className }) => {
   const { scrollY } = useScroll()
-  const { height } = useDimensions()
+  const { height, width } = useDimensions()
 
   const springY = useSpring(scrollY, {
     stiffness: 1000,
@@ -17,18 +17,20 @@ const ParallaxWrapper: React.FC<{
     restDelta: 0.001,
   })
 
-  const parallaxY = useTransform(() => {
-    return height - springY.get() * 0.2 + 1
+  const widthY = useTransform(() => {
+    if (springY.get() >= height) return width - 17
+    return (springY.get() / height) * width
   })
 
   return (
     <motion.div
-      style={{ marginTop: scrollY.get() >= height ? height : parallaxY }}
+      style={{ marginTop: height }}
       className={twMerge(
-        "absolute z-10 h-[1000px] w-full bg-[#1c1c1c] drop-shadow-2xl border-t border-t-zinc-500",
+        "absolute z-10 h-[2000px] w-full bg-[#1c1c1c] drop-shadow-2xl overflow-x-hidden",
         className,
       )}
     >
+      <motion.div style={{ width: widthY }} className="h-1 bg-violet-800" />
       <StarsBackground />
       {children}
     </motion.div>

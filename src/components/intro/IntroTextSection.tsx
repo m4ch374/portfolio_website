@@ -111,7 +111,7 @@ const IntroTextSection: React.FC = () => {
             y: 0,
             transition: { delay: 0.4, ease: "easeOut", duration: 0.7 },
           }}
-          className="mt-2 flex gap-1 rounded-md border border-violet-900 bg-violet-950/30 px-4 py-2 font-thin text-violet-300/80 transition-colors duration-300 hover:border-violet-800 hover:bg-violet-950/80 hover:text-violet-200"
+          className="mt-4 flex gap-1 rounded-md border border-violet-900 bg-violet-950/30 px-4 py-2 font-thin text-violet-300/80 transition-colors duration-300 hover:border-violet-800 hover:bg-violet-950/80 hover:text-violet-200"
         >
           <LinkedIn />
           View My LinkedIn

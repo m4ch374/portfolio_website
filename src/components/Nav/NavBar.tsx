@@ -4,7 +4,7 @@ import NavBarHighlightLink from "./NavBarHighlightLink"
 import Github from "assets/Icons/Github"
 import Burger from "assets/Icons/Burger"
 import MenuModal from "./MenuModal"
-import { AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 const NavBar: React.FC = () => {
   const buttonRef = useRef<HTMLButtonElement>(null!)
@@ -14,13 +14,14 @@ const NavBar: React.FC = () => {
     <nav className="fixed z-50 my-4 flex h-16 w-full items-center justify-center">
       <div className="flex h-full w-[90%] items-center justify-between rounded-xl border border-zinc-700/50 bg-black/10 p-4 backdrop-blur-md">
         <div className="flex items-center gap-2">
-          <button
+          <motion.button
             className="block md:hidden"
             onClick={() => setShowModal(s => !s)}
             ref={buttonRef}
+            whileTap={{ scale: 0.7 }}
           >
             <Burger />
-          </button>
+          </motion.button>
           <span className="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 bg-clip-text font-logo text-2xl tracking-tighter text-transparent">
             Henry <span className="font-sans font-bold">Wan</span>
           </span>
