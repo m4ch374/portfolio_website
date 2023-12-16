@@ -1,3 +1,4 @@
+import NavBar from "components/Nav/NavBar"
 import ParallaxWrapper from "components/Parallax/ParallaxWrapper"
 import IntroBanner from "components/intro/IntroBanner"
 import React, { useState } from "react"
@@ -8,6 +9,7 @@ const App: React.FC = () => {
 
   return (
     <DarkTheme.Provider value={themeController}>
+      <NavBar />
       <IntroBanner />
       <ParallaxWrapper></ParallaxWrapper>
     </DarkTheme.Provider>
