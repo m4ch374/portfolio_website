@@ -22,13 +22,16 @@ const NavBar: React.FC = () => {
           >
             <Burger />
           </motion.button>
-          <span className="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 bg-clip-text font-logo text-2xl tracking-tighter text-transparent">
+          <button
+            onClick={() => scrollTo({ top: 0, behavior: "smooth" })}
+            className="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 bg-clip-text font-logo text-2xl tracking-tighter text-transparent"
+          >
             Henry <span className="font-sans font-bold">Wan</span>
-          </span>
+          </button>
         </div>
 
         <div className="m-4 ml-8 hidden w-[50%] rounded-md border border-zinc-400/20 bg-zinc-900/20 p-1 text-center font-thin md:flex">
-          <NavBarHighlightLink className="inline-block w-full">
+          <NavBarHighlightLink className="inline-block w-full" href="#about">
             About
           </NavBarHighlightLink>
           <NavBarHighlightLink className="inline-block w-full">

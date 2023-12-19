@@ -1,3 +1,4 @@
+import AboutMe from "components/About/AboutMe"
 import NavBar from "components/Nav/NavBar"
 import ParallaxWrapper from "components/Parallax/ParallaxWrapper"
 import IntroBanner from "components/intro/IntroBanner"
@@ -8,11 +9,15 @@ const App: React.FC = () => {
   const themeController = useState(false)
 
   return (
-    <DarkTheme.Provider value={themeController}>
-      <NavBar />
-      <IntroBanner />
-      <ParallaxWrapper>hihihi</ParallaxWrapper>
-    </DarkTheme.Provider>
+    <div className="scroll-smooth">
+      <DarkTheme.Provider value={themeController}>
+        <NavBar />
+        <IntroBanner />
+        <ParallaxWrapper>
+          <AboutMe />
+        </ParallaxWrapper>
+      </DarkTheme.Provider>
+    </div>
   )
 }
 

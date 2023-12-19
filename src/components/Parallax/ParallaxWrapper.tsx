@@ -26,13 +26,14 @@ const ParallaxWrapper: React.FC<{
     <motion.div
       style={{ marginTop: height }}
       className={twMerge(
-        "absolute z-10 h-[2000px] w-full bg-[#1c1c1c] drop-shadow-2xl overflow-x-hidden",
+        "absolute z-10 w-full bg-[#111111] drop-shadow-2xl overflow-x-hidden",
         className,
       )}
     >
       <motion.div style={{ width: widthY }} className="h-1 bg-violet-800" />
-      <StarsBackground />
+      {/* <PotatoForeground /> */}
       {children}
+      <StarsBackground />
     </motion.div>
   )
 }

@@ -1,5 +1,8 @@
 # Config copied from a previous project w/ modifications
 
+# excludes
+exclude: ^public/potato\.glb$
+
 # default checks
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
