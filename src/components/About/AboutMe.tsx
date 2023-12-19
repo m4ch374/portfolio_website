@@ -5,7 +5,7 @@ const AboutMe: React.FC = () => {
   return (
     <section
       id="about"
-      className="mx-auto my-8 flex w-[90%] max-w-[650px] flex-col items-center rounded-lg border border-zinc-400/20 bg-[#444444]/10 p-4 backdrop-blur-sm lg:mr-[2%]"
+      className="mx-auto my-8 flex w-[90%] max-w-[700px] flex-col items-center rounded-lg p-4 shadow-2xl"
     >
       <img
         src="/myself.jpg"

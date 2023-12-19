@@ -2,7 +2,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion"
 import useDimensions from "hooks/Dimensions.hooks"
 import React from "react"
 import { twMerge } from "tailwind-merge"
-// import StarsBackground from "./StarsBackground"
+import StarsBackground from "./StarsBackground"
 
 const ParallaxWrapper: React.FC<{
   children?: string | JSX.Element | JSX.Element[]
@@ -26,13 +26,14 @@ const ParallaxWrapper: React.FC<{
     <motion.div
       style={{ marginTop: height }}
       className={twMerge(
-        "absolute z-10 w-full bg-[#1c1c1c] drop-shadow-2xl overflow-x-hidden",
+        "absolute z-10 w-full bg-[#111111] drop-shadow-2xl overflow-x-hidden",
         className,
       )}
     >
       <motion.div style={{ width: widthY }} className="h-1 bg-violet-800" />
+      {/* <PotatoForeground /> */}
       {children}
-      {/* <StarsBackground /> */}
+      <StarsBackground />
     </motion.div>
   )
 }
