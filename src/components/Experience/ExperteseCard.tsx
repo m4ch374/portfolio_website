@@ -1,18 +1,44 @@
-import React from "react"
+import React, { useCallback, useEffect, useRef } from "react"
 
 type TExpertiseCard = {
   children?: string | JSX.Element | JSX.Element[]
+  title: string
+  icon?: JSX.Element
+  innerGlowColor?: string
 }
 
-const ExpertiseCard: React.FC<TExpertiseCard> = ({ children }) => {
+const ExpertiseCard: React.FC<TExpertiseCard> = ({
+  children,
+  title,
+  icon,
+  innerGlowColor = "#ffffff",
+}) => {
+  const selfRef = useRef<HTMLDivElement>(null!)
+
+  const hexToRgb = useCallback((s: string, opacity: number) => {
+    const sliced = s.slice(1)
+
+    const rgb = sliced.match(/.{1,2}/g)!
+    return `rgba(${parseInt(rgb[0], 16)}, ${parseInt(rgb[1], 16)}, ${parseInt(
+      rgb[2],
+      16,
+    )}, ${opacity})`
+  }, [])
+
+  useEffect(() => {
+    const div = selfRef.current
+
+    console.log(hexToRgb(innerGlowColor, 0.06))
+    div.style.setProperty("--inner-glow", hexToRgb(innerGlowColor, 0.1))
+  }, [hexToRgb, innerGlowColor])
+
   return (
     <div
+      ref={selfRef}
       className="
         card
         relative
-        h-[calc(100%-2px)]
-        min-h-[360px]
-        w-[calc(100%-2px)]
+        min-h-[160px]
         min-w-[360px]
         flex-1
         rounded-md
@@ -40,8 +66,24 @@ const ExpertiseCard: React.FC<TExpertiseCard> = ({ children }) => {
         before:hover:opacity-100
       "
     >
-      <div className="absolute inset-[1px] z-20 rounded-[inherit] bg-stone-900">
-        {children}
+      <div className="relative z-20 m-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-[inherit] bg-stone-900 p-4">
+        <div className="flex items-center gap-2 text-2xl font-semibold">
+          {icon}
+          <h1 className="font-mono">{title}</h1>
+        </div>
+        <div className="mt-4 font-mono text-zinc-400">
+          <h3>
+            {"<"}
+            <span className="text-red-400">p</span>
+            {">"}
+          </h3>
+          <div className="border-l border-zinc-600 px-4">{children}</div>
+          <h3>
+            {"<"}
+            <span className="text-red-400">p</span>
+            {"/>"}
+          </h3>
+        </div>
       </div>
     </div>
   )
