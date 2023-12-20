@@ -40,7 +40,7 @@ const ToolsExperienced: React.FC = () => {
   }, [mouseOver])
 
   return (
-    <section className="mx-auto mb-8 flex w-[80%] flex-col items-center rounded-lg">
+    <section className="mx-auto mb-8 flex w-[90%] max-w-[1100px] flex-col items-center rounded-lg">
       <h1 className="m-4 text-4xl font-bold">Skills & Expertise</h1>
       <div ref={selfRef} id="cards" className="flex w-full flex-wrap gap-2">
         <ExpertiseCard

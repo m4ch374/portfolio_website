@@ -31,7 +31,6 @@ const ExpertiseCard: React.FC<TExpertiseCard> = ({
   useEffect(() => {
     const div = selfRef.current
 
-    console.log(hexToRgb(innerGlowColor, 0.06))
     div.style.setProperty("--inner-glow", hexToRgb(innerGlowColor, 0.1))
   }, [hexToRgb, innerGlowColor])
 
@@ -42,7 +41,7 @@ const ExpertiseCard: React.FC<TExpertiseCard> = ({
         card
         relative
         min-h-[160px]
-        min-w-[360px]
+        min-w-[300px]
         flex-1
         rounded-md
         bg-stone-400/20

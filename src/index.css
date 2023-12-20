@@ -32,7 +32,7 @@
 
 .card::after {
   background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
+    400px circle at var(--mouse-x) var(--mouse-y),
     rgba(255, 255, 255, 0.6),
     transparent 40%
   );
