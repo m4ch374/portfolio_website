@@ -47,6 +47,7 @@ const ToolsExperienced: React.FC = () => {
           title="Software Development"
           icon={<CodeBracket />}
           innerGlowColor="#f87171"
+          titleClassName="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent"
         >
           <>
             Spending 3 years at school, and another year in the industry, I
@@ -59,7 +60,8 @@ const ToolsExperienced: React.FC = () => {
         <ExpertiseCard
           title="Frontend Development"
           icon={<PaintBrush />}
-          innerGlowColor="#34d399"
+          innerGlowColor="#059669"
+          titleClassName="bg-gradient-to-r from-yellow-200 via-green-200 to-green-300 bg-clip-text text-transparent"
         >
           Interested in building beautiful frontend solution, I am experienced
           in using React, Tailwind, Framer Motion and other frameworks.
@@ -68,6 +70,7 @@ const ToolsExperienced: React.FC = () => {
           title="Mobile Development"
           icon={<Mobile />}
           innerGlowColor="#7c3aed"
+          titleClassName="bg-gradient-to-r from-purple-400 to-yellow-400 bg-clip-text text-transparent"
         >
           <>
             Worked in a tech startup, gained exposure in building cross-platform
