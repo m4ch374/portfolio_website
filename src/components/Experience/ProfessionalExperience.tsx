@@ -1,5 +1,6 @@
 import React from "react"
 import ExperienceThumbnail from "./ExperienceThumbnail"
+import Download from "assets/Icons/Download"
 
 const ProfessionalExperience: React.FC = () => {
   return (
@@ -17,7 +18,16 @@ const ProfessionalExperience: React.FC = () => {
           organizations and roles. These experience made me grew immensely both
           on the personal and professional front.
         </p>
-        <a></a>
+        <div className="mt-8 flex justify-center">
+          <a
+            href="/Resume.pdf"
+            download
+            className="flex gap-2 rounded-full border border-violet-400 bg-violet-900/40 px-4 py-2 text-violet-300 backdrop-blur-sm transition-colors hover:bg-violet-900/60"
+          >
+            <Download />
+            <h3>Download my CV</h3>
+          </a>
+        </div>
       </div>
       <div className="grid w-full grid-cols-2 place-items-center gap-y-10 md:grid-cols-3">
         <ExperienceThumbnail imgSrc="/stomble.jpeg" />
