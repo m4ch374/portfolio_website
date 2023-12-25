@@ -46,7 +46,7 @@ const StarsBackground: React.FC = () => {
   const inView = useInView(ref)
 
   return (
-    <div ref={ref} className="absolute left-0 top-0 -z-50 h-full w-full">
+    <div ref={ref} className="absolute left-0 top-0 -z-10 h-full w-full">
       <Canvas
         camera={{ position: [0, 0, 1] }}
         frameloop={inView ? "always" : "demand"}

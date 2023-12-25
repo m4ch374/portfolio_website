@@ -11,8 +11,10 @@ const AboutMe: React.FC = () => {
         src="/myself.jpg"
         className="my-8 aspect-square w-36 rounded-full drop-shadow-night-sun"
       />
-      <h3 className="text-xl font-thin text-zinc-300">Henry is a</h3>
-      <h1 className="text-4xl font-bold">Problem Solver</h1>
+      <div className="text-center">
+        <h3 className="text-xl font-thin text-zinc-300">Henry is a</h3>
+        <h1 className="text-4xl font-bold">Problem Solver</h1>
+      </div>
 
       <div className="mt-8 flex w-[100%] max-w-[550px] flex-wrap justify-between gap-2 text-xs text-zinc-400">
         <div className="flex items-center">

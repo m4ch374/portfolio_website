@@ -1,10 +1,12 @@
 import React, { useCallback, useEffect, useRef } from "react"
+import { ClassNameValue, twMerge } from "tailwind-merge"
 
 type TExpertiseCard = {
   children?: string | JSX.Element | JSX.Element[]
   title: string
   icon?: JSX.Element
   innerGlowColor?: string
+  titleClassName?: ClassNameValue
 }
 
 const ExpertiseCard: React.FC<TExpertiseCard> = ({
@@ -12,6 +14,7 @@ const ExpertiseCard: React.FC<TExpertiseCard> = ({
   title,
   icon,
   innerGlowColor = "#ffffff",
+  titleClassName = "",
 }) => {
   const selfRef = useRef<HTMLDivElement>(null!)
 
@@ -28,7 +31,6 @@ const ExpertiseCard: React.FC<TExpertiseCard> = ({
   useEffect(() => {
     const div = selfRef.current
 
-    console.log(hexToRgb(innerGlowColor, 0.06))
     div.style.setProperty("--inner-glow", hexToRgb(innerGlowColor, 0.1))
   }, [hexToRgb, innerGlowColor])
 
@@ -39,7 +41,7 @@ const ExpertiseCard: React.FC<TExpertiseCard> = ({
         card
         relative
         min-h-[160px]
-        min-w-[360px]
+        min-w-[300px]
         flex-1
         rounded-md
         bg-stone-400/20
@@ -69,7 +71,7 @@ const ExpertiseCard: React.FC<TExpertiseCard> = ({
       <div className="relative z-20 m-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-[inherit] bg-stone-900 p-4">
         <div className="flex items-center gap-2 text-2xl font-semibold">
           {icon}
-          <h1 className="font-mono">{title}</h1>
+          <h1 className={twMerge("font-mono", titleClassName)}>{title}</h1>
         </div>
         <div className="mt-4 font-mono text-zinc-400">
           <h3>

@@ -7,6 +7,7 @@ type TNavBarHighlightLink = {
   children?: string | JSX.Element | JSX.Element[]
   href?: string
   target?: HTMLAttributeAnchorTarget
+  onClick?: () => void
 }
 
 const NavBarHighlightLink: React.FC<TNavBarHighlightLink> = ({
@@ -14,6 +15,7 @@ const NavBarHighlightLink: React.FC<TNavBarHighlightLink> = ({
   children,
   href,
   target,
+  onClick = () => {},
 }) => {
   const [hover, setHover] = useState(false)
 
@@ -24,6 +26,7 @@ const NavBarHighlightLink: React.FC<TNavBarHighlightLink> = ({
       target={target}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      onClick={onClick}
     >
       {children}
       {hover && (

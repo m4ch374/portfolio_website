@@ -34,7 +34,7 @@ const MenuModal: React.FC<TMenuModal> = ({ setVisible, triggerButton }) => {
   return (
     <motion.ul
       onClick={e => e.stopPropagation()}
-      className="absolute left-[5%] top-20 block h-[400px] min-w-[200px] origin-top-left rounded-xl border border-zinc-600/20 bg-black/20 shadow-2xl backdrop-blur-md md:hidden"
+      className="absolute left-[5%] top-20 block min-w-[200px] origin-top-left rounded-xl border border-zinc-600/20 bg-black/20 shadow-2xl backdrop-blur-md md:hidden"
       initial={{ scale: 0 }}
       animate={{
         scale: 1,
@@ -46,7 +46,11 @@ const MenuModal: React.FC<TMenuModal> = ({ setVisible, triggerButton }) => {
       }}
     >
       <li className="w-full px-2 py-4 font-thin">
-        <NavBarHighlightLink className="inline-block w-full">
+        <NavBarHighlightLink
+          className="inline-block w-full"
+          href="#about"
+          onClick={() => setVisible(false)}
+        >
           About
         </NavBarHighlightLink>
         <NavBarHighlightLink className="inline-block w-full">
