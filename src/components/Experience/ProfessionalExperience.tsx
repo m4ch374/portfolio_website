@@ -3,7 +3,7 @@ import ExperienceThumbnail from "./ExperienceThumbnail"
 
 const ProfessionalExperience: React.FC = () => {
   return (
-    <section className="mx-auto flex h-[1000px] w-[90%] max-w-[800px] flex-col items-center gap-8">
+    <section className="mx-auto my-20 flex w-[90%] max-w-[800px] flex-col items-center gap-8">
       <div className="text-center">
         <h1 className="text-3xl font-bold">
           I am proud to have worked with{" "}
@@ -17,8 +17,9 @@ const ProfessionalExperience: React.FC = () => {
           organizations and roles. These experience made me grew immensely both
           on the personal and professional front.
         </p>
+        <a></a>
       </div>
-      <div className="grid w-full grid-cols-2 items-center gap-y-10 md:grid-cols-3">
+      <div className="grid w-full grid-cols-2 place-items-center gap-y-10 md:grid-cols-3">
         <ExperienceThumbnail imgSrc="/stomble.jpeg" />
         <ExperienceThumbnail imgSrc="/csesoc.jpeg" />
         <ExperienceThumbnail imgSrc="/sas.jpeg" />

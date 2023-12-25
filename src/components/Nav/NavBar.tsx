@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
   const [showModal, setShowModal] = useState(false)
 
   return (
-    <nav className="fixed z-50 my-4 flex h-16 w-full items-center justify-center">
+    <nav className="fixed z-40 my-4 flex h-16 w-full items-center justify-center">
       <div className="flex h-full w-[90%] items-center justify-between rounded-xl border border-zinc-700/50 bg-black/10 p-4 backdrop-blur-md">
         <div className="flex items-center gap-2">
           <motion.button
