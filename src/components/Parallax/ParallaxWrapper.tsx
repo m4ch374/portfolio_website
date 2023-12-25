@@ -23,9 +23,12 @@ const ParallaxWrapper: React.FC<{
   return (
     <div
       style={{ marginTop: height }}
-      className="absolute left-0 top-0 w-full overflow-x-hidden bg-[#111111]"
+      className="absolute left-0 top-0 z-0 w-full overflow-x-hidden bg-[#111111]"
     >
-      <motion.div style={{ width: widthY }} className="h-1 bg-violet-800" />
+      <motion.div
+        style={{ width: widthY }}
+        className="relative z-10 h-1 bg-violet-800"
+      />
       {/* <PotatoForeground /> */}
       {children}
       <StarsBackground />

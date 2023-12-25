@@ -1,10 +1,7 @@
-import React, { useState } from "react"
-import { motion } from "framer-motion"
-import OrgExperience from "./Popup/OrgExperience"
+import React from "react"
+import ExperienceThumbnail from "./ExperienceThumbnail"
 
 const ProfessionalExperience: React.FC = () => {
-  const [clicked, setClicked] = useState(false)
-
   return (
     <section className="mx-auto flex h-[1000px] w-[90%] max-w-[800px] flex-col items-center gap-8">
       <div className="text-center">
@@ -21,16 +18,12 @@ const ProfessionalExperience: React.FC = () => {
           on the personal and professional front.
         </p>
       </div>
-      <div className="flex flex-wrap justify-center">
-        <motion.div
-          onClick={() => setClicked(s => !s)}
-          layout
-          transition={{ layout: { duration: 0.5, ease: "easeInOut" } }}
-          className={`h-20 w-20 bg-white ${
-            clicked ? "fixed left-10 top-32 z-[70]" : "relative z-40"
-          }`}
-        />
-        {clicked && <OrgExperience />}
+      <div className="grid w-full grid-cols-2 items-center gap-y-10 md:grid-cols-3">
+        <ExperienceThumbnail imgSrc="/stomble.jpeg" />
+        <ExperienceThumbnail imgSrc="/csesoc.jpeg" />
+        <ExperienceThumbnail imgSrc="/sas.jpeg" />
+        <ExperienceThumbnail imgSrc="/unsw.jpeg" />
+        <ExperienceThumbnail imgSrc="/enjoyneer.jpg" />
       </div>
     </section>
   )
