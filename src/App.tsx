@@ -1,4 +1,6 @@
 import AboutMe from "components/About/AboutMe"
+import ContactMe from "components/Contact/ContactMe"
+import SlantedDivider from "components/Contact/SlantedDivider"
 import ProfessionalExperience from "components/Experience/ProfessionalExperience"
 import ToolsExperienced from "components/Experience/ToolsExperienced"
 import NavBar from "components/Nav/NavBar"
@@ -16,9 +18,11 @@ const App: React.FC = () => {
         <AboutMe />
         <ToolsExperienced />
         <ProfessionalExperience />
-        <div className="w-full overflow-hidden">
+        <div className="relative w-full overflow-hidden">
           <RecentProjects />
+          <SlantedDivider />
         </div>
+        <ContactMe />
       </ParallaxWrapper>
     </div>
   )
