@@ -53,7 +53,7 @@ const ContactMe: React.FC = () => {
         </div>
       </div>
       <hr className="mx-auto mt-10 w-[80%] max-w-[1000px] border-zinc-300/30" />
-      <div className="mt-4 flex items-center justify-center gap-1 font-semibold text-zinc-200">
+      <div className="mt-4 flex items-center justify-center gap-1 font-semibold text-zinc-100">
         <h3>CC-BY-NC 4.0</h3>
         <CreativeCommons className="h-5 w-5" />
         <h3>Henry Wan 2023 - 2024</h3>
