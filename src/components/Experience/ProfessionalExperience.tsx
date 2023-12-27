@@ -33,11 +33,31 @@ const ProfessionalExperience: React.FC = () => {
         </div>
       </div>
       <div className="grid w-full grid-cols-2 place-items-center gap-y-10 md:grid-cols-3">
-        <ExperienceThumbnail imgSrc="/stomble.jpeg" />
-        <ExperienceThumbnail imgSrc="/csesoc.jpeg" />
-        <ExperienceThumbnail imgSrc="/sas.jpeg" />
-        <ExperienceThumbnail imgSrc="/unsw.jpeg" />
-        <ExperienceThumbnail imgSrc="/enjoyneer.jpg" />
+        <ExperienceThumbnail
+          imgSrc="/stomble.jpeg"
+          companyName="Stomble"
+          companyLink="https://www.linkedin.com/company/stomble/"
+        />
+        <ExperienceThumbnail
+          imgSrc="/csesoc.jpeg"
+          companyName="UNSW CSESoc"
+          companyLink="https://www.linkedin.com/company/csesoc/mycompany/"
+        />
+        <ExperienceThumbnail
+          imgSrc="/sas.jpeg"
+          companyName="SAS"
+          companyLink="https://www.linkedin.com/company/sas/"
+        />
+        <ExperienceThumbnail
+          imgSrc="/unsw.jpeg"
+          companyName="UNSW"
+          companyLink="https://www.linkedin.com/school/unsw/"
+        />
+        <ExperienceThumbnail
+          imgSrc="/enjoyneer.jpg"
+          companyName="Enjoyneer"
+          companyLink="https://www.enjoyneer.com.hk/"
+        />
       </div>
     </section>
   )
