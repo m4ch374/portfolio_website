@@ -34,10 +34,13 @@ const NavBar: React.FC = () => {
           <NavBarHighlightLink className="inline-block w-full" href="#about">
             About
           </NavBarHighlightLink>
-          <NavBarHighlightLink className="inline-block w-full">
+          <NavBarHighlightLink
+            className="inline-block w-full"
+            href="#experience"
+          >
             Experience
           </NavBarHighlightLink>
-          <NavBarHighlightLink className="inline-block w-full">
+          <NavBarHighlightLink className="inline-block w-full" href="#projects">
             Projects
           </NavBarHighlightLink>
         </div>
@@ -47,13 +50,13 @@ const NavBar: React.FC = () => {
             href="https://www.linkedin.com/in/henry-wan-dev/"
             target="_blank"
           >
-            <Github />
+            <LinkedIn />
           </NavBarHighlightLink>
           <NavBarHighlightLink
             href="https://github.com/m4ch374"
             target="_blank"
           >
-            <LinkedIn />
+            <Github />
           </NavBarHighlightLink>
         </div>
       </div>

@@ -4,7 +4,10 @@ import Download from "assets/Icons/Download"
 
 const ProfessionalExperience: React.FC = () => {
   return (
-    <section className="mx-auto my-20 flex w-[90%] max-w-[800px] flex-col items-center gap-8">
+    <section
+      id="experience"
+      className="mx-auto flex w-[90%] max-w-[800px] flex-col items-center gap-8 py-20"
+    >
       <div className="text-center">
         <h1 className="text-3xl font-bold">
           I am proud to have worked with{" "}
