@@ -62,3 +62,22 @@
 .custom-shape-divider-bottom-1700107624 .shape-fill {
   fill: #8B5CF6;
 }
+
+.conic-card {
+  --border-angle: 0turn;
+  background-image:
+    conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+
+  animation: bg-spin 3s linear infinite;
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
