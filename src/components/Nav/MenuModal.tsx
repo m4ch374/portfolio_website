@@ -53,10 +53,10 @@ const MenuModal: React.FC<TMenuModal> = ({ setVisible, triggerButton }) => {
         >
           About
         </NavBarHighlightLink>
-        <NavBarHighlightLink className="inline-block w-full">
+        <NavBarHighlightLink className="inline-block w-full" href="#experience">
           Experience
         </NavBarHighlightLink>
-        <NavBarHighlightLink className="inline-block w-full">
+        <NavBarHighlightLink className="inline-block w-full" href="#projects">
           Projects
         </NavBarHighlightLink>
       </li>

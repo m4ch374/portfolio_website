@@ -11,7 +11,10 @@ const RecentProjects: React.FC = () => {
   const rotateY = useTransform(x, [0, 400], [-15, 15])
 
   return (
-    <div className="mx-auto mb-40 mt-10 w-[90%] max-w-[900px]">
+    <section
+      id="projects"
+      className="mx-auto mb-40 w-[90%] max-w-[900px] pt-20"
+    >
       <h1 className="mb-8 text-center text-4xl font-bold">Recent Project</h1>
       <div className="flex flex-col-reverse gap-8 md:flex-row">
         <div
@@ -57,7 +60,7 @@ const RecentProjects: React.FC = () => {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
