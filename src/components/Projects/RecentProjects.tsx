@@ -50,7 +50,7 @@ const RecentProjects: React.FC = () => {
             </p>
           </div>
           <a
-            href="https://github.com/m4ch374/gigconnect"
+            href="https://gigconnect.henrywan.dev/"
             target="_blank"
             className="flex items-center gap-2 rounded-md border border-sky-900 bg-sky-800/40 px-2.5 py-1.5 font-thin text-sky-300/80 backdrop-blur-sm transition-colors duration-300 hover:border-sky-700 hover:bg-sky-900/80 hover:text-sky-200 md:mb-8"
             rel="noreferrer"
