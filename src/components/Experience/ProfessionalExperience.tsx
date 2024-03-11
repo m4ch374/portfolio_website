@@ -23,7 +23,7 @@ const ProfessionalExperience: React.FC = () => {
         </p>
         <div className="mt-8 flex justify-center">
           <a
-            href="/Resume.pdf"
+            href="/Resume_2024.pdf"
             download
             className="flex gap-2 rounded-full border border-violet-400 bg-violet-900/40 px-4 py-2 text-violet-300 backdrop-blur-sm transition-colors hover:bg-violet-900/60"
           >
