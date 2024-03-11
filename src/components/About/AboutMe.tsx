@@ -88,20 +88,19 @@ const AboutMe: React.FC = () => {
 
         <div className="flex items-center">
           <Check />
-          <h3>Programming Tutor</h3>
+          <h3>UNSW Casual Academic</h3>
         </div>
       </div>
 
       <p className="my-8 text-justify">
-        Hello, My name is Henry. I am a full-stack developer currently employed
-        in{" "}
+        Hello, My name is Henry. I am a Casual Academic employed in{" "}
         <a
           className="text-violet-300 underline underline-offset-4 transition-colors hover:text-violet-500"
-          href="https://www.linkedin.com/company/stomble/"
+          href="https://www.linkedin.com/company/unsw-computer-science-and-engineering/mycompany/"
           target="_blank"
           rel="noreferrer"
         >
-          Stomble
+          UNSW School of Computer Science and Engineering
         </a>
         {". "}
         And a fresh graduate from the{" "}
