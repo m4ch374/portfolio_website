@@ -1,11 +1,12 @@
-import React, { useEffect, useMemo, useState } from "react"
+import React, { useEffect, useMemo, useState, lazy, Suspense } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import ArrowUpRight from "assets/Icons/ArrowUpRight"
 import Terminal from "assets/Icons/Terminal"
 import useDimensions from "hooks/Dimensions.hooks"
 import TailwindBreakpoints from "constants/TailwindBreakpoint"
-import IntroLaptop from "./IntroLaptop"
 import LinkedIn from "assets/Icons/LinkedIn"
+
+const IntroLaptop = lazy(() => import("./IntroLaptop"))
 
 const IntroTextSection: React.FC = () => {
   const { width } = useDimensions()
@@ -135,7 +136,9 @@ const IntroTextSection: React.FC = () => {
         >
           Hold and drag to move model.
         </motion.div>
-        <IntroLaptop />
+        <Suspense fallback={undefined}>
+          <IntroLaptop />
+        </Suspense>
       </motion.div>
     </div>
   )

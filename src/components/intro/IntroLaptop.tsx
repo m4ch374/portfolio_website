@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import { OrbitControls } from "@react-three/drei"
 import { Canvas, invalidate, useFrame, useLoader } from "@react-three/fiber"
-import React, { useCallback, useEffect, useRef } from "react"
+import React, { Suspense, useCallback, useEffect, useRef } from "react"
 // eslint-disable-next-line import/extensions
 import { GLTFLoader } from "three/examples/jsm/Addons.js"
 
@@ -51,7 +51,9 @@ const IntroLaptop: React.FC = () => {
         position={[10, 5, 20]}
         color={"#ede9fe"}
       />
-      <Laptop />
+      <Suspense fallback={undefined}>
+        <Laptop />
+      </Suspense>
       <OrbitControls enableZoom={false} enablePan={false} />
     </Canvas>
   )
