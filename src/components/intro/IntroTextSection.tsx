@@ -120,26 +120,30 @@ const IntroTextSection: React.FC = () => {
         </motion.a>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, x: 400 }}
-        animate={{
-          opacity: 1,
-          x: 0,
-          transition: { delay: 0.6, ease: "easeOut", duration: 0.7 },
-        }}
-        className="relative flex aspect-square w-[400px] max-w-[400px] items-center justify-center rounded-md md:w-[50%]"
+      <Suspense
+        fallback={
+          <div className="relative flex aspect-square w-[400px] max-w-[400px] items-center justify-center rounded-md bg-transparent md:flex-1" />
+        }
       >
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 3 } }}
-          className="absolute bottom-10 z-10 cursor-default rounded-full border border-zinc-600/80 bg-zinc-800/20 px-4 py-2 font-thin text-zinc-400 backdrop-blur-lg"
+          initial={{ opacity: 0, x: 400 }}
+          animate={{
+            opacity: 1,
+            x: 0,
+            transition: { delay: 0.6, ease: "easeOut", duration: 0.7 },
+          }}
+          className="relative flex aspect-square w-[400px] max-w-[400px] items-center justify-center rounded-md md:w-[50%]"
         >
-          Hold and drag to move model.
-        </motion.div>
-        <Suspense fallback={undefined}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 3 } }}
+            className="absolute bottom-10 z-10 cursor-default rounded-full border border-zinc-600/80 bg-zinc-800/20 px-4 py-2 font-thin text-zinc-400 backdrop-blur-lg"
+          >
+            Hold and drag to move model.
+          </motion.div>
           <IntroLaptop />
-        </Suspense>
-      </motion.div>
+        </motion.div>
+      </Suspense>
     </div>
   )
 }
