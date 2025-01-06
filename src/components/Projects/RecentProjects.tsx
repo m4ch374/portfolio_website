@@ -31,8 +31,8 @@ const RecentProjects: React.FC = () => {
           }}
         >
           <motion.img
-            src="/showcase2.png"
-            className="aspect-auto rounded-xl border-2 border-zinc-200/20 object-cover drop-shadow-night-sun"
+            src="/showcase_3.png"
+            className="aspect-auto rounded-xl border-2 border-zinc-200/20 object-cover drop-shadow-night-sun md:max-w-xl"
             style={{ rotateX, rotateY }}
           />
         </div>
@@ -40,17 +40,16 @@ const RecentProjects: React.FC = () => {
           <div className="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
             <div className="flex select-none items-center gap-2 overflow-hidden rounded-md border border-zinc-200/20 bg-zinc-800 px-2 py-1 text-3xl font-bold">
               <Wifi className="h-8 w-8" />
-              <h3 className="tracking-tighter">GigConnect</h3>
+              <h3 className="tracking-tighter">Prompt Tester</h3>
             </div>
             <p className="mt-4 font-thin">
-              GigConnect is a fully responsive, easy-to-use platform for
-              companies to gain contact with hidden talents. Work could be
-              outsourced on this platform, where talents could apply for the
-              work that they are interested in.
+              Prompt Tester leverages groq and open source LLMs to create an
+              insanely fast prompt testing tool. Casually built within a
+              weekend.
             </p>
           </div>
           <a
-            href="https://gigconnect.henrywan.dev/"
+            href="https://prompt.henrywan.dev/"
             target="_blank"
             className="flex items-center gap-2 rounded-md border border-sky-900 bg-sky-800/40 px-2.5 py-1.5 font-thin text-sky-300/80 backdrop-blur-sm transition-colors duration-300 hover:border-sky-700 hover:bg-sky-900/80 hover:text-sky-200 md:mb-8"
             rel="noreferrer"
